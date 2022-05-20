@@ -37,28 +37,28 @@ void sort(std::vector<int> &A, int p, int r)
 void Merge(std::vector<int> &A, int p, int q, int r)
 {
 	
-	int l = p;
-	int j = q + 1;
+	int leftPos = p;
+	int midPos = q + 1;
 	int curPos = 0;
 	std::vector<int> result(r-p+1);
 
-	while(l<=q && j<=r)
+	while(leftPos<=q && midPos<=r)
 	{
-		if(A[l] < A[j])
+		if(A[leftPos] < A[midPos])
 		{
-			result[curPos++] = A[l++];
+			result[curPos++] = A[leftPos++];
 		}else
 		{
-			result[curPos++] = A[j++];
+			result[curPos++] = A[midPos++];
 		}
 	}
-	while(l<=q)
+	while(leftPos<=q)
 	{
-		result[curPos++] = A[l++];
+		result[curPos++] = A[leftPos++];
 	}
-	while(j<=r)
+	while(midPos<=r)
 	{
-		result[curPos++] = A[j++];
+		result[curPos++] = A[midPos++];
 	}
 	for (int i = p; i<=r; i++)
 	{

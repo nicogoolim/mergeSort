@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ConsoleApplication3.cpp">
+    <ClCompile Include="mergeSort.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
